@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>NOTEBOOKS</title>
+    <link rel="icon" href="../img/ico.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="icon-header">
+            <div class="menu-phone">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
+                        src="../img/header/menu-icon.png" alt="menu-icon" id="btn-phone"></button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="../pages/celulares.html">CELULARES</a>
+                        <a href="../pages/notebooks.html">NOTEBOOKS</a>
+                        <a href="../pages/smartwatches.html">SMARTWATCHES</a>
+                        <a href="../pages/tablets.html">TABLETS</a>
+                        <a href="../pages/smarthome.html">SMART HOME</a>
+                        <a href="../pages/audio.html">AUDIO</a>
+                        <a href="../pages/accesorios.html">ACCESORIOS</a>
+                    </div>
+                </div>
+            </div>
+            <a href="../index.html">
+                <img src="../img/header/logo.svg" alt="logo" id="logo">
+            </a>
+            <div>
+                <a href="#"><img src="../img/header/search1.png" alt="search">
+                </a>
+                <a href="../pages/tiendas.html">
+                    <img src="../img/header/map.png" alt="map">
+                </a>
+                <a href="../pages/mi-cuenta.html">
+                    <img src="../img/header/perfil.png" alt="mi cuenta">
+                </a>
+            </div>
+        </section>
+
+        <section class="navegacion">
+            <section>
+                <a href="../index.html">
+                    <img src="../img/header/logo.svg" alt="logo" class="logo-desk">
+                </a>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../img/header/menu-icon.png" alt="menu-icon" id="btn-burger"> MENU
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../pages/celulares.html">CELULARES</a></li>
+                        <li><a class="dropdown-item" href="../pages/notebooks.html">NOTEBOOKS</a></li>
+                        <li><a class="dropdown-item" href="../pages/smartwatches.html">SMARTWATCHES</a></li>
+                        <li><a class="dropdown-item" href="../pages/tablets.html">TABLETS</a></li>
+                        <li><a class="dropdown-item" href="../pages/smarthome.html">SMART HOME</a></li>
+                        <li><a class="dropdown-item" href="../pages/audio.html">AUDIO</a></li>
+                        <li><a class="dropdown-item" href="../pages/accesorios.html">ACCESORIOS</a></li>
+                    </ul>
+                </div>
+            </section>
+            <input class="buscador" type="text" placeholder="Buscar productos..." required>
+            <a href="../pages/tiendas.html">
+                <img src="../img/header/map.png" alt="map" class="icon-desk">Tiendas
+            </a>
+            <a href="../pages/mi-cuenta.html">
+                <img src="../img/header/perfil.png" alt="mi cuenta" class="icon-desk">Mi Cuenta
+            </a>
+        </section>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <!--Seccion rosa del pie de pagina-->
+        <section class="section-pink">
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link"><img
+                        src="../img/footer/instagram.png" alt="link a instagram" class="link__img"></a>
+                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank"
+                    class="redes-sociales__link"><img src="../img/footer/facebook.png" alt="link a facebook"
+                        class="link__img"></a>
+                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link"><img
+                        src="../img/footer/whatsapp.png" alt="link a whatsapp" class="link__img"></a>
+            </div>
+            <div class="empresa-desk">
+                <p class="empresa__titulo">Empresa</p>
+                <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
+                <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
+                <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
+            </div>
+            <div class="suscribete">
+                <p class="suscribete__titulo">Suscribete a nuestras noticias</p>
+                <P class="suscribete__subtitulo">¡Suscribite y recibí todas nuestras novedades!</P>
+                <form action="#" class="suscribete__form">
+                    <input type="email" id="email-index" placeholder="Ingresa tu e-mail" required="">
+                    <input type="submit" value="SUSCRIBIRME" id="boton-suscribirme">
+                </form>
+            </div>
+            <section class="no">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Empresa
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="empresa-phone">
+                                    <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
+                                    <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
+                                    <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con
+                                        nosotros</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--Seccion negra del pie de pagina-->
+        <section class="section-black">
+            <div class="flex-pagos">
+                <img src="../img/footer/visa.svg" alt="visa" class="flex-pagos__img">
+                <img src="../img/footer/oca.svg" alt="oca" class="flex-pagos__img">
+                <img src="../img/footer/scotiabank.svg" alt="scotiabank" class="flex-pagos__img">
+                <img src="../img/footer/bbvanet.svg" alt="bbva" class="flex-pagos__img">
+                <img src="../img/footer/passcard.svg" alt="passcard" class="flex-pagos__img">
+                <img src="../img/footer/master.svg" alt="master" class="flex-pagos__img">
+                <img src="../img/footer/bandes.svg" alt="bandes" class="flex-pagos__img">
+                <img src="../img/footer/anda.svg" alt="anda" class="flex-pagos__img">
+                <img src="../img/footer/ebrou.svg" alt="ebrou" class="flex-pagos__img">
+                <img src="../img/footer/tarjetad.svg" alt="tarjetad" class="flex-pagos__img">
+            </div>
+            <p class="copyright">&copy;Copyright 2023 / Trinity Technology</p>
+        </section>
+    </footer>
+    </body>
+    
+    </html>
