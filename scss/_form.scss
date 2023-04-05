@@ -1,0 +1,97 @@
+/*variables*/
+$color-rosa: #cf8585;
+$color-gris: #646464;
+$letra-fuerte: 600;
+
+/*mixin flex*/
+@mixin display-direction{
+    display: flex;
+    flex-direction: column;
+}
+
+/*mixin grid*/
+@mixin dis-gtc-gtr-ai-ji($gridtr){
+    display: grid;
+    grid-template-columns: 2rem 2fr;
+    grid-template-rows: $gridtr;
+    align-items: center;
+    justify-items: start;
+}
+
+.formularios-de-cuentas {
+    margin-bottom: 1rem;
+}
+.contacto {
+    @include display-direction;
+    align-items: start;
+    margin-bottom: 3rem;
+
+    form {
+        @include display-direction;
+        align-items: center;
+
+            div {
+                @include display-direction;
+                margin-bottom: 1rem;
+
+                    .input-boton {
+                        width: 9.5rem;
+                        height: 2.5rem;
+
+                        &:hover {
+                            background-color: $color-rosa;
+                        }
+                    }
+
+                    .input-form {
+                        height: 2.5rem;
+                    }
+
+                    .input-area {
+                        height: 10rem;
+                    }
+            }
+
+            #Terminos-y-condiciones {
+                height: 10rem;
+                overflow: scroll;
+                border: 1px solid $color-gris;
+            }
+
+            #coso {
+                @include dis-gtc-gtr-ai-ji(1fr 1fr 1fr);
+            }
+
+            #coso2 {
+                @include dis-gtc-gtr-ai-ji(1fr 1fr);
+
+                    #tyc {
+                        width: 1.3rem;
+                    }
+                    #news {
+                        @extend #tyc;
+                    }
+            }
+            #botones-juntos {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    }
+}
+
+.subtexto{
+    color: $color-rosa;
+    font-weight: $letra-fuerte;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.nosotros h2 {
+    @extend .subtexto;
+}
+
+.send {
+    margin: 1rem;
+}

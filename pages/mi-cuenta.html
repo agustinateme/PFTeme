@@ -2,94 +2,122 @@
 <html lang="es">
 
 <head>
-    <title>MI CUENTA</title>
-    <link rel="icon" href="../img/ico.svg">
+    <!--SEO-->
+    <meta name="description" content="Accede a todas las funciones de nuestra tienda en línea de electrónica y tecnología registrándote y creando una cuenta. Inicia sesión para realizar compras, hacer un seguimiento de tus pedidos, guardar tus productos favoritos y más. ¡Regístrate ahora y disfruta de la mejor experiencia de compra en línea!">
+    <meta name="keywords" content="celulares, tablets, notebooks, smartwatches, xiaomi, samsung, apple">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <link href="../css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <!--Links de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <!--titulo e icono-->
+    <title>Mi Cuenta</title>
+    <link rel="icon" href="../img/ico.svg">
+
+    <!--Links de estilos propios-->
+    <link rel="stylesheet" href="../scss/style.css">
 </head>
 
 <body>
     <header>
-        <section class="icon-header">
-            <div class="menu-phone">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
-                        src="../img/header/menu-icon.png" alt="menu-icon" id="btn-phone"></button>
-
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <a href="../pages/celulares.html">CELULARES</a>
-                        <a href="../pages/notebooks.html">NOTEBOOKS</a>
-                        <a href="../pages/smartwatches.html">SMARTWATCHES</a>
-                        <a href="../pages/tablets.html">TABLETS</a>
-                        <a href="../pages/smarthome.html">SMART HOME</a>
-                        <a href="../pages/audio.html">AUDIO</a>
-                        <a href="../pages/accesorios.html">ACCESORIOS</a>
-                    </div>
-                </div>
-            </div>
-            <a href="../index.html">
-                <img src="../img/header/logo.svg" alt="logo" id="logo">
-            </a>
-            <div>
-                <a href="#"><img src="../img/header/search1.png" alt="search">
-                </a>
-                <a href="../pages/tiendas.html">
-                    <img src="../img/header/map.png" alt="map">
-                </a>
-                <a href="../pages/mi-cuenta.html">
-                    <img src="../img/header/perfil.png" alt="mi cuenta">
-                </a>
-            </div>
-        </section>
-
-        <section class="navegacion">
+        <!-- HEADER DESKTOP -->
+        <section class="nav-desktop">
             <section>
-                <a href="../index.html">
-                    <img src="../img/header/logo.svg" alt="logo" class="logo-desk">
+                <!-- logo -->
+                <a class="nav-desktop__logo" href="../index.html">
+                    <p class="logo">TRINITY TECHNOLOGY</p>
                 </a>
+                <!-- Menú desplegable DESKTOP -->
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="../img/header/menu-icon.png" alt="menu-icon" id="btn-burger"> MENU
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../pages/celulares.html">CELULARES</a></li>
-                        <li><a class="dropdown-item" href="../pages/notebooks.html">NOTEBOOKS</a></li>
-                        <li><a class="dropdown-item" href="../pages/smartwatches.html">SMARTWATCHES</a></li>
-                        <li><a class="dropdown-item" href="../pages/tablets.html">TABLETS</a></li>
-                        <li><a class="dropdown-item" href="../pages/smarthome.html">SMART HOME</a></li>
-                        <li><a class="dropdown-item" href="../pages/audio.html">AUDIO</a></li>
-                        <li><a class="dropdown-item" href="../pages/accesorios.html">ACCESORIOS</a></li>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="menu-icon" src="../img/header/menu-icon.png" alt="">
+                        MENU
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="./celulares.html">CELULARES</a></li>
+                        <li><a class="dropdown-item" href="./notebooks.html">NOTEBOOKS</a></li>
+                        <li><a class="dropdown-item" href="./smartwatches.html">SMARTWATCHES</a></li>
+                        <li><a class="dropdown-item" href="./tablets.html">TABLETS</a></li>
+                        <li><a class="dropdown-item" href="./smarthome.html">SMART HOME</a></li>
+                        <li><a class="dropdown-item" href="./audio.html">AUDIO</a></li>
+                        <li><a class="dropdown-item" href="./accesorios.html">ACCESORIOS</a></li>
                     </ul>
                 </div>
             </section>
+            <!-- buscador -->
             <input class="buscador" type="text" placeholder="Buscar productos..." required>
-            <a href="../pages/tiendas.html">
-                <img src="../img/header/map.png" alt="map" class="icon-desk">Tiendas
+            <!-- link a tiendas -->
+            <a href="./tiendas.html" class="nav-desktop__link">
+                <img src="../img/header/map.png" alt="map" class="icon-desk">
+                <p>Tiendas</p>
             </a>
-            <a href="../pages/mi-cuenta.html">
-                <img src="../img/header/perfil.png" alt="mi cuenta" class="icon-desk">Mi Cuenta
+            <!-- link a mi cuenta -->
+            <a href="./mi-cuenta.html" class="nav-desktop__link">
+                <img src="../img/header/perfil.png" alt="mi cuenta" class="icon-desk">
+                <p>Mi Cuenta</p>
             </a>
         </section>
 
+        <!-- HEADER PHONE -->
+        <section class="nav-phone">
+            <div>
+                <!-- Botón para abrir el menú Offcanvas PHONE -->
+                <button id="menu-phone" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <img class="menu-icon" src="../img/header/menu-icon.png" alt="">
+                </button>
+                <!-- Menú Offcanvas -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu"
+                    aria-labelledby="offcanvasMenuLabel">
+                    <div class="offcanvas-header">
+                        <img class="menu-icon" data-bs-dismiss="offcanvas" aria-label="Cerrar"
+                            src="../img/header/menu-icon.png" alt="">
+                    </div>
+                    <div class="offcanvas-body" id="offcanvas-cuerpo">
+                        <ul>
+                            <li><a href="./celulares.html">CELULARES</a></li>
+                            <li><a href="./notebooks.html">NOTEBOOKS</a></li>
+                            <li><a href="./smartwatches.html">SMARTWATCHES</a></li>
+                            <li><a href="./tablets.html">TABLETS</a></li>
+                            <li><a href="./smarthome.html">SMART HOME</a></li>
+                            <li><a href="./audio.html">AUDIO</a></li>
+                            <li><a href="./accesorios.html">ACCESORIOS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- logo -->
+            <a class="nav-phone__logo" href="../index.html">
+                <p class="logo">TRINITY TECHNOLOGY</p>
+            </a>
+            <!-- buscador -->
+            <a href="#"><img src="../img/header/search1.png" alt="search">
+            </a>
+            <!-- link a tiendas -->
+            <a href="./tiendas.html">
+                <img src="../img/header/map.png" alt="map">
+            </a>
+            <!-- link a mi cuenta -->
+            <a href="./mi-cuenta.html">
+                <img src="../img/header/perfil.png" alt="mi cuenta">
+            </a>
+        </section>
     </header>
     <main>
+        <!--volver al index-->
         <a class="ir-a-index" href="../index.html">
-            <img src="../img/ir-a-index.png" alt="back-to-index"> Página principal
+            <img src="../img/ir-a-index.png" alt="back-to-index">
         </a>
+
+        <!--mi cuenta-->
         <h1>MI CUENTA</h1>
         <div class="grid-mi-cuenta">
             <div class="formularios-de-cuentas">
@@ -169,78 +197,82 @@
                 <p class="tienda__Subi">Montevideo, Uruguay</p>
                 <p class="tienda__num">+598 22 333 444</p>
                 <a class="tienda__ema"
-                    href="mailto:servicio_cuentas@trinitytechgnology.com.uy">servicio_cuentas@trinitytechgnology.com.uy</a>
+                    href="mailto:cuentas@trinitytechnology.com.uy">cuentas@trinitytechnology.com.uy</a>
                 <p class="tienda__hor">Lunes a Viernes de 08:00 a 19:00 hs</p>
             </div>
         </div>
     </main>
-    <footer>
-        <!--Seccion rosa del pie de pagina-->
-        <section class="section-pink">
-            <div class="redes-sociales">
-                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link"><img
-                        src="../img/footer/instagram.png" alt="link a instagram" class="link__img"></a>
-                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank"
-                    class="redes-sociales__link"><img src="../img/footer/facebook.png" alt="link a facebook"
-                        class="link__img"></a>
-                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link"><img
-                        src="../img/footer/whatsapp.png" alt="link a whatsapp" class="link__img"></a>
-            </div>
-            <div class="empresa-desk">
-                <p class="empresa__titulo">Empresa</p>
-                <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
-                <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
-                <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
-            </div>
-            <div class="suscribete">
-                <p class="suscribete__titulo">Suscribete a nuestras noticias</p>
-                <P class="suscribete__subtitulo">¡Suscribite y recibí todas nuestras novedades!</P>
-                <form action="#" class="suscribete__form">
-                    <input type="email" id="email-index" placeholder="Ingresa tu e-mail" required="">
-                    <input type="submit" value="SUSCRIBIRME" id="boton-suscribirme">
-                </form>
-            </div>
-            <section class="no">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Empresa
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="empresa-phone">
-                                    <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
-                                    <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
-                                    <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con
-                                        nosotros</a>
-                                </div>
+<footer>
+    <!--Seccion rosa del pie de pagina-->
+    <section class="section-pink">
+        <!-- links a redes sociales -->
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link">
+                <img src="../img/footer/instagram.png" alt="link a instagram" class="link__img">
+            </a>
+            <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank" class="redes-sociales__link">
+                <img src="../img/footer/facebook.png" alt="link a facebook" class="link__img">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link">
+                <img src="../img/footer/whatsapp.png" alt="link a whatsapp" class="link__img">
+            </a>
+        </div>
+        <!-- links de empresa vista DESKTOP -->
+        <div class="empresa-desk">
+            <p class="empresa__titulo">Empresa</p>
+            <a href="./nosotros.html" class="empresa__link">Nosotros</a>
+            <a href="./contacto.html" class="empresa__link">Contacto</a>
+            <a href="./trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
+        </div>
+        <!-- suscripcion -->
+        <div class="suscribete">
+            <p class="suscribete__titulo">Suscribete a nuestras noticias</p>
+            <P class="suscribete__subtitulo">¡Suscribite y recibí todas nuestras novedades!</P>
+            <form action="#" class="suscribete__form">
+                <input type="email" id="email-index" placeholder="Ingresa tu e-mail" required="">
+                <input type="submit" value="SUSCRIBIRME" id="boton-suscribirme">
+            </form>
+        </div>
+        <!-- links de empresa vista PHONE -->
+        <section class="accorion-phone">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Empresa
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="empresa-phone">
+                                <a href="./nosotros.html" class="empresa__link">Nosotros</a>
+                                <a href="./contacto.html" class="empresa__link">Contacto</a>
+                                <a href="./trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </section>
-        <!--Seccion negra del pie de pagina-->
-        <section class="section-black">
-            <div class="flex-pagos">
-                <img src="../img/footer/visa.svg" alt="visa" class="flex-pagos__img">
-                <img src="../img/footer/oca.svg" alt="oca" class="flex-pagos__img">
-                <img src="../img/footer/scotiabank.svg" alt="scotiabank" class="flex-pagos__img">
-                <img src="../img/footer/bbvanet.svg" alt="bbva" class="flex-pagos__img">
-                <img src="../img/footer/passcard.svg" alt="passcard" class="flex-pagos__img">
-                <img src="../img/footer/master.svg" alt="master" class="flex-pagos__img">
-                <img src="../img/footer/bandes.svg" alt="bandes" class="flex-pagos__img">
-                <img src="../img/footer/anda.svg" alt="anda" class="flex-pagos__img">
-                <img src="../img/footer/ebrou.svg" alt="ebrou" class="flex-pagos__img">
-                <img src="../img/footer/tarjetad.svg" alt="tarjetad" class="flex-pagos__img">
             </div>
-            <p class="copyright">&copy;Copyright 2023 / Trinity Technology</p>
         </section>
-    </footer>
-    </body>
-    
-    </html>
+    </section>
+    <!--Seccion negra del pie de pagina-->
+    <section class="section-black">
+        <div class="flex-pagos">
+            <img src="../img/footer/visa.svg" alt="visa" class="flex-pagos__img">
+            <img src="../img/footer/oca.svg" alt="oca" class="flex-pagos__img">
+            <img src="../img/footer/scotiabank.svg" alt="scotiabank" class="flex-pagos__img">
+            <img src="../img/footer/bbvanet.svg" alt="bbva" class="flex-pagos__img">
+            <img src="../img/footer/passcard.svg" alt="passcard" class="flex-pagos__img">
+            <img src="../img/footer/master.svg" alt="master" class="flex-pagos__img">
+            <img src="../img/footer/bandes.svg" alt="bandes" class="flex-pagos__img">
+            <img src="../img/footer/anda.svg" alt="anda" class="flex-pagos__img">
+            <img src="../img/footer/ebrou.svg" alt="ebrou" class="flex-pagos__img">
+            <img src="../img/footer/tarjetad.svg" alt="tarjetad" class="flex-pagos__img">
+        </div>
+        <p class="copyright">&copy;Copyright 2023 / Trinity Technology</p>
+    </section>
+</footer>
+</body>
+</html>

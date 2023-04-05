@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <!--SEO-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En nuestra tienda en línea, encontrarás una amplia variedad de productos de tecnología de última generación, desde celulares hasta relojes inteligentes. Además, ofrecemos dispositivos de audio, notebooks y tablets para satisfacer todas tus necesidades tecnológicas. ¡Explora ahora y encuentra el producto perfecto para ti!">
+    <meta name="keywords" content="celulares, tablets, notebooks, smartwatches, xiaomi, samsung, apple">
+
+    <!--Links de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
+    <!--Links de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
+    <!--titulo e icono-->
     <title>Trinity Technnology</title>
     <link rel="icon" href="./img/ico.svg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <link href="./css/style.css" rel="stylesheet">
-</head>
 
+    <!--Links de estilos propios-->
+    <link rel="stylesheet" href="./scss/style.css">
+
+    
+</head>
 <body>
     <header>
-        <section class="icon-header">
-            <div class="menu-phone">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
-                        src="./img/header/menu-icon.png" alt="menu-icon" id="btn-phone"></button>
-
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <a href="./pages/celulares.html">CELULARES</a>
-                        <a href="./pages/notebooks.html">NOTEBOOKS</a>
-                        <a href="./pages/smartwatches.html">SMARTWATCHES</a>
-                        <a href="./pages/tablets.html">TABLETS</a>
-                        <a href="./pages/smarthome.html">SMART HOME</a>
-                        <a href="./pages/audio.html">AUDIO</a>
-                        <a href="./pages/accesorios.html">ACCESORIOS</a>
-                    </div>
-                </div>
-            </div>
-            <a href="./index.html">
-                <img src="./img/header/logo.svg" alt="logo" id="logo">
-            </a>
-            <div>
-                <a href="#"><img src="./img/header/search1.png" alt="search">
-                </a>
-                <a href="./pages/tiendas.html">
-                    <img src="./img/header/map.png" alt="map">
-                </a>
-                <a href="./pages/mi-cuenta.html">
-                    <img src="./img/header/perfil.png" alt="mi cuenta">
-                </a>
-            </div>
-        </section>
-
-        <section class="navegacion">
+        <!-- HEADER DESKTOP -->
+        <section class="nav-desktop">
             <section>
-                <a href="./index.html">
-                    <img src="./img/header/logo.svg" alt="logo" class="logo-desk">
+                <!-- logo -->
+                <a class="nav-desktop__logo" href="./index.html">
+                    <p class="logo">TRINITY TECHNOLOGY</p>
                 </a>
+                <!-- Menú desplegable DESKTOP -->
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="./img/header/menu-icon.png" alt="menu-icon" id="btn-burger"> MENU
-                    </a>
-
-                    <ul class="dropdown-menu">
+                        <img class="menu-icon" src="./img/header/menu-icon.png" alt="">
+                        MENU
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./pages/celulares.html">CELULARES</a></li>
                         <li><a class="dropdown-item" href="./pages/notebooks.html">NOTEBOOKS</a></li>
                         <li><a class="dropdown-item" href="./pages/smartwatches.html">SMARTWATCHES</a></li>
@@ -76,286 +52,680 @@
                     </ul>
                 </div>
             </section>
+            <!-- buscador -->
             <input class="buscador" type="text" placeholder="Buscar productos..." required>
-            <a href="./pages/tiendas.html">
-                <img src="./img/header/map.png" alt="map" class="icon-desk">Tiendas
+            <!-- link a tiendas -->
+            <a href="./pages/tiendas.html" class="nav-desktop__link">
+                <img src="./img/header/map.png" alt="map" class="icon-desk">
+                <p>Tiendas</p>
             </a>
+            <!-- link a mi cuenta -->
+            <a href="./pages/mi-cuenta.html" class="nav-desktop__link">
+                <img src="./img/header/perfil.png" alt="mi cuenta" class="icon-desk">
+                <p>Mi Cuenta</p>
+            </a>
+        </section>   
+
+        <!-- HEADER PHONE -->
+        <section class="nav-phone">
+            <div>
+                <!-- Botón para abrir el menú Offcanvas PHONE -->
+                <button id="menu-phone" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu">
+                    <img class="menu-icon" src="./img/header/menu-icon.png" alt="">
+                </button>
+                <!-- Menú Offcanvas -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                    <div class="offcanvas-header">
+                        <img class="menu-icon" data-bs-dismiss="offcanvas" aria-label="Cerrar" src="./img/header/menu-icon.png" alt="">
+                    </div>
+                    <div class="offcanvas-body" id="offcanvas-cuerpo">
+                        <ul>
+                            <li><a href="./pages/celulares.html">CELULARES</a></li>
+                            <li><a href="./pages/notebooks.html">NOTEBOOKS</a></li>
+                            <li><a href="./pages/smartwatches.html">SMARTWATCHES</a></li>
+                            <li><a href="./pages/tablets.html">TABLETS</a></li>
+                            <li><a href="./pages/smarthome.html">SMART HOME</a></li>
+                            <li><a href="./pages/audio.html">AUDIO</a></li>
+                            <li><a href="./pages/accesorios.html">ACCESORIOS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- logo -->
+            <a class="nav-phone__logo" href="./index.html">
+                <p class="logo">TRINITY TECHNOLOGY</p>
+            </a>
+            <!-- buscador -->
+            <a href="#"><img src="./img/header/search1.png" alt="search">
+            </a>
+            <!-- link a tiendas -->
+            <a href="./pages/tiendas.html">
+                <img src="./img/header/map.png" alt="map">
+            </a>
+            <!-- link a mi cuenta -->
             <a href="./pages/mi-cuenta.html">
-                <img src="./img/header/perfil.png" alt="mi cuenta" class="icon-desk">Mi Cuenta
+                <img src="./img/header/perfil.png" alt="mi cuenta">
             </a>
         </section>
-
     </header>
     <main>
-        <section class="banner-phone">
-            <div id="carousel1" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/bp1.svg" class="d-block w-100" alt="Trinity Technnology">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/bp2.svg" class="d-block w-100" alt="Envios gratis">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/bp3.svg" class="d-block w-100" alt="30% compras web con visa">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/bp4.svg" class="d-block w-100" alt="20% en consolas y videojuegos">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/bp5.svg" class="d-block w-100" alt="10% en realidad aumentada">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
+        <!-- carrousel de imagenes DESKTOP -->
         <section class="banner-desktop">
-            <div id="carousel2" class="carousel slide">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./img/bd1.svg" class="d-block w-100" alt="Trinity Technnology">
+                        <img src="./img/bd1.jpg" class="d-block w-100" alt="Slide 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/bd2.svg" class="d-block w-100" alt="Envios gratis">
+                        <img src="./img/bd2.jpg" class="d-block w-100" alt="Slide 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/bd3.svg" class="d-block w-100" alt="30% compras web con visa">
+                        <img src="./img/bd3.jpg" class="d-block w-100" alt="Slide 3">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/bd4.svg" class="d-block w-100" alt="20% en consolas y videojuegos">
+                        <img src="./img/bd4.jpg" class="d-block w-100" alt="Slide 4">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/bd5.svg" class="d-block w-100" alt="10% en realidad aumentada">
+                        <img src="./img/bd5.jpg" class="d-block w-100" alt="Slide 5">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
         
+        <!-- carrousel de imagenes PHONE -->
+        <section class="banner-phone">
+            <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly2" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly2" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly2" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly2" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly2" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/bp1.jpg" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/bp2.jpg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/bp3.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/bp4.jpg" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/bp5.jpg" class="d-block w-100" alt="Slide 5">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        
+        <!-- productos destacados-->
         <section class="productos-destacados">
             <h2>PRODUCTOS DESTACADOS</h2>
             <div>
                 <div class="productos">
-                    <img src="./img/iphone-14-pro.webp" alt="producto">
-                    <p class="producto-info">Apple Iphone 14 pro 256gb/6gb ram</p>
-                    <p class="producto-precio">USD 2.059,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/iphone-14-pro.webp" alt="iphone 14 pro">
+                    <p class="productos__titulo">Apple Iphone 14 pro 256gb/6gb ram</p>
+                    <p class="productos__precio">USD 2.059,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/macbook-pro-m1.webp" alt="producto">
-                    <p class="producto-info">Macbook Pro M1 16.2' 512gb ssd | 16gb ram 120hz</p>
-                    <p class="producto-precio">USD 4.009,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/macbook-pro-m1.webp" alt="macbook pro m1">
+                    <p class="productos__titulo">Macbook Pro M1 16.2' 512gb ssd | 16gb ram 120hz</p>
+                    <p class="productos__precio">USD 4.009,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/ipad-air.webp" alt="producto">
-                    <p class="producto-info">Ipad Air (4th generation) 64gb wifi 10.9'</p>
-                    <p class="producto-precio">USD 909,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/ipad-air.webp" alt="ipad air">
+                    <p class="productos__titulo">Ipad Air (4th generation) 64gb wifi 10.9'</p>
+                    <p class="productos__precio">USD 909,00</p>
+                    <div class="product-stock">
+                        <p class="productos__agotado">Agotado</p>
+                        <select name="cantidad" class="product-stock__unidades" disabled>
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago" disabled>COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/notebook-hp-victus.webp" alt="producto">
-                    <p class="producto-info">Notebook HP Victus gaming core i5-12450 8gb|512gb ssd 15.6'</p>
-                    <p class="producto-precio">USD 987,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/notebook-hp-victus.webp" alt="notebook hp victus">
+                    <p class="productos__titulo">Notebook HP Victus gaming core i5-12450 8gb|512gb ssd 15.6'</p>
+                    <p class="productos__precio">USD 987,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/notebook-lenovo-ideapad.webp" alt="producto">
-                    <p class="producto-info">Notebook Lenovo Ideapad 3 15.6' 1tb hdd + 256gb ssd / 12gb ram i7-11</p>
-                    <p class="producto-precio">USD 1.267,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/notebook-lenovo-ideapad.webp" alt="notebook lenovo ideapad">
+                    <p class="productos__titulo">Notebook Lenovo Ideapad 3 15.6' 1tb hdd + 256gb ssd / 12gb ram i7-11</p>
+                    <p class="productos__precio">USD 1.267,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/samsung-galaxy-s23-ultra.webp" alt="producto">
-                    <p class="producto-info">Samsung Galaxy S23 Ultra 5g 512gb/12gb ram</p>
-                    <p class="producto-precio">USD 1.819,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/samsung-galaxy-s23-ultra.webp" alt="samsung galaxy s23 ultra">
+                    <p class="productos__titulo">Samsung Galaxy S23 Ultra 5g 512gb/12gb ram</p>
+                    <p class="productos__precio">USD 1.819,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/samsung-galaxy-tab-s6.webp" alt="producto">
-                    <p class="producto-info">Samsung Galaxy Tab S6 lite 64gb 10.4' 2022 wi-fi + bookcover + spen</p>
-                    <p class="producto-precio">USD 487,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/samsung-galaxy-tab-s6.webp" alt="samsung galaxy tab s6">
+                    <p class="productos__titulo">Samsung Galaxy Tab S6 lite 64gb 10.4' 2022 wi-fi + bookcover + spen</p>
+                    <p class="productos__precio">USD 487,00</p>
+                    <div class="product-stock">
+                        <p class="productos__agotado">Agotado</p>
+                        <select name="cantidad" class="product-stock__unidades" disabled>
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago" disabled>COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/xiaomi12.jpg" alt="producto">
-                    <p class="producto-info">Xiaomi 12 lite 128gb/6 ram</p>
-                    <p class="producto-precio">USD 527,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/xiaomi12.jpg" alt="xiaomi 12">
+                    <p class="productos__titulo">Xiaomi 12 lite 128gb/6 ram</p>
+                    <p class="productos__precio">USD 527,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
             </div>
         </section>
         
+        <!-- banner APPLE -->
         <section class="banner-secundario">
             <div class="banner-secundario__info">
                 <h3>APPLE</h3>
                 <h4>Piensa diferente</h4>
             </div>
             <div class="banner-secundario__img">
-                <img src="./img/p1.svg" alt="">
-                <img src="./img/p2.svg" alt="">
-                <img src="./img/p3.svg" alt="">
-                <img src="./img/p4.svg" alt="">
-                <img src="./img/p5.svg" alt="">
-                <img src="./img/p6.svg" alt="">
+                <img src="./img/p1.svg" alt="iphone">
+                <img src="./img/p2.svg" alt="airpods">
+                <img src="./img/p3.svg" alt="ipad" class="banner-secundario__img3--radio">
+                <img src="./img/p4.svg" alt="macbook">
+                <img src="./img/p5.svg" alt="apple watch" class="banner-secundario__img5--radio">
+                <img src="./img/p6.svg" alt="airtag" class="banner-secundario__img6--radio">
             </div>
         </section>
         
+        <!-- nuevo en tienda -->
         <section class="productos-destacados">
             <h2>NUEVO EN TIENDA</h2>
             <div>
                 <div class="productos">
-                    <img src="./img/apple-watch-se.webp" alt="producto">
-                    <p class="producto-info">Apple watch se 44mm aluminum sport band</p>
-                    <p class="producto-precio">USD 499,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/apple-watch-se.webp" alt="apple watch se">
+                    <p class="productos__titulo">Apple watch se 44mm aluminum sport band</p>
+                    <p class="productos__precio">USD 499,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/parlante-inalambrico-jbl-boombox-3.webp" alt="producto">
-                    <p class="producto-info">Parlante inalámbrico jbl boombox 3 180w</p>
-                    <p class="producto-precio">USD 579,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/parlante-inalambrico-jbl-boombox-3.webp" alt="parlante inalambrico jbl boombox 3">
+                    <p class="productos__titulo">Parlante inalámbrico jbl boombox 3 180w</p>
+                    <p class="productos__precio">USD 579,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/freidora-sin-aceite.webp" alt="producto">
-                    <p class="producto-info">Freidora sin aceite mi smart air fryer 3.5l</p>
-                    <p class="producto-precio">USD 129,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/freidora-sin-aceite.webp" alt="freidora sin aceite">
+                    <p class="productos__titulo">Freidora sin aceite mi smart air fryer 3.5l</p>
+                    <p class="productos__precio">USD 129,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/cargador-apple-usb.webp" alt="producto">
-                    <p class="producto-info">Cargador apple usb-a 12w carga rápida</p>
-                    <p class="producto-precio">USD 37,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/cargador-apple-usb.webp" alt="cargador apple usb">
+                    <p class="productos__titulo">Cargador apple usb-a 12w carga rápida</p>
+                    <p class="productos__precio">USD 37,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
             </div>
         </section>
         
+        <!-- banner SAMSUNG -->
         <section class="banner-secundario">
             <div class="banner-secundario__info">
                 <h3>SAMSUNG</h3>
                 <h4>Juntos para el mañana</h4>
             </div>
             <div class="banner-secundario__img">
-                <img src="./img/s1.svg" alt="">
-                <img src="./img/s2.svg" alt="">
-                <img src="./img/s3.svg" alt="">
-                <img src="./img/s4.svg" alt="">
-                <img src="./img/s5.svg" alt="">
-                <img src="./img/s6.svg" alt="">
+                <img src="./img/s1.svg" alt="s23">
+                <img src="./img/s2.svg" alt="buds3">
+                <img src="./img/s3.svg" alt="samsung tab" class="banner-secundario__img3--radio">
+                <img src="./img/s4.svg" alt="samsung watch">
+                <img src="./img/s5.svg" alt="samsung notebook" class="banner-secundario__img5--radio">
+                <img src="./img/s6.svg" alt="z flip" class="banner-secundario__img6--radio">
             </div>
         </section>
         
+        <!-- ofertas de la semana -->
         <section class="productos-destacados">
             <h2>OFERTAS DE LA SEMANA</h2>
             <div>
                 <div class="productos">
-                    <img src="./img/jbl-t130-tws.webp" alt="producto">
-                    <p class="producto-info">Jbl t130 tws auriculares inalambricos cancelacion de ruido bluetooth</p>
-                    <p class="producto-precio">USD 97,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/jbl-t130-tws.webp" alt="jbl t130 tws">
+                    <p class="productos__titulo">Jbl t130 tws auriculares inalambricos cancelacion de ruido bluetooth</p>
+                    <p class="productos__precio">USD 97,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/tablet-samsung-galaxy-tab-s8.webp" alt="producto">
-                    <p class="producto-info">Tablet samsung galaxy tab s8 11' 128gb/8gb</p>
-                    <p class="producto-precio">USD 899,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/tablet-samsung-galaxy-tab-s8.webp" alt="tablet samsung galaxy tab s8">
+                    <p class="productos__titulo">Tablet samsung galaxy tab s8 11' 128gb/8gb</p>
+                    <p class="productos__precio">USD 899,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/tablet-xiaomi-mi-pad-5.webp" alt="producto">
-                    <p class="producto-info">Tablet xiaomi mi pad 5 11' 256gb rom | 6gb ram</p>
-                    <p class="producto-precio">USD 549,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/tablet-xiaomi-mi-pad-5.webp" alt="tablet xiaomi mi pad 5">
+                    <p class="productos__titulo">Tablet xiaomi mi pad 5 11' 256gb rom | 6gb ram</p>
+                    <p class="productos__precio">USD 549,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/impresora-portatil-xiaomi.webp" alt="producto">
-                    <p class="producto-info">Impresora portátil xiaomi mi portable photo printer</p>
-                    <p class="producto-precio">USD 75,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/impresora-portatil-xiaomi.webp" alt="impresora portatil xiaomi">
+                    <p class="productos__titulo">Impresora portátil xiaomi mi portable photo printer</p>
+                    <p class="productos__precio">USD 75,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
             </div>
         </section>
         
+        <!-- banner XIAOMI -->
         <section class="banner-secundario">
             <div class="banner-secundario__info">
                 <h3>XIAOMI</h3>
                 <h4>Innovación para todos</h4>
             </div>
             <div class="banner-secundario__img">
-                <img src="./img/x1.svg" alt="">
-                <img src="./img/x2.svg" alt="">
-                <img src="./img/x3.svg" alt="">
-                <img src="./img/x4.svg" alt="">
-                <img src="./img/x5.svg" alt="">
-                <img src="./img/x6.svg" alt="">
+                <img src="./img/x1.svg" alt="mi 12">
+                <img src="./img/x2.svg" alt="redmi buds">
+                <img src="./img/x3.svg" alt="mop 2" class="banner-secundario__img3--radio">
+                <img src="./img/x4.svg" alt="xiaomi tv stick">
+                <img src="./img/x5.svg" alt="scooter" class="banner-secundario__img5--radio">
+                <img src="./img/x6.svg" alt="band 7 pro" class="banner-secundario__img6--radio">
             </div>
         </section>
         
+        <!-- cyber lunes -->
         <section class="productos-destacados">
             <h2>CYBER LUNES</h2>
             <div>
                 <div class="productos">
-                    <img src="./img/sensor-para-puertas-y-ventanas.webp" alt="producto">
-                    <p class="producto-info">Sensor para puertas y ventanas mi door and window sensor 2 xiaomi</p>
-                    <p class="producto-precio">USD 19,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/sensor-para-puertas-y-ventanas.webp" alt="sensor para puertas y ventanas">
+                    <p class="productos__titulo">Sensor para puertas y ventanas mi door and window sensor 2 xiaomi</p>
+                    <p class="productos__precio">USD 19,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="./img/monitor-de-temperatura.webp" alt="producto">
-                    <p class="producto-info">Monitor de temperatura y humedad 2 xiaomi</p>
-                    <p class="producto-precio">USD 9,99</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="./img/monitor-de-temperatura.webp" alt="monitor de temperatura">
+                    <p class="productos__titulo">Monitor de temperatura y humedad 2 xiaomi</p>
+                    <p class="productos__precio">USD 9,99</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
         </section>
+        
+        <!--MODAL PARA COMPRAS-->
+        <div class="modal fade" id="modalMetodosPago" tabindex="-1" aria-labelledby="modalMetodosPagoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMetodosPagoLabel">Seleccione un método de pago</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Selecciona tu método de pago:</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoPago" id="pagoTarjeta" value="tarjeta"
+                                checked>
+                            <label class="form-check-label" for="pagoTarjeta">
+                                Tarjeta de Crédito o Débito
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoPago" id="pagoPaypal" value="paypal">
+                            <label class="form-check-label" for="pagoPaypal">
+                                PayPal
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary modal-bt" id="btn" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary modal-bt" id="btn">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!--Seccion rosa del pie de pagina-->
         <section class="section-pink">
+            <!-- links a redes sociales -->
             <div class="redes-sociales">
-                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link"><img
-                        src="./img/footer/instagram.png" alt="link a instagram" class="link__img"></a>
-                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank"
-                    class="redes-sociales__link"><img src="./img/footer/facebook.png" alt="link a facebook"
-                        class="link__img"></a>
-                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link"><img
-                        src="./img/footer/whatsapp.png" alt="link a whatsapp" class="link__img"></a>
+                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link">
+                    <img src="./img/footer/instagram.png" alt="link a instagram" class="link__img">
+                </a>
+                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank" class="redes-sociales__link">
+                    <img src="./img/footer/facebook.png" alt="link a facebook" class="link__img">
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link">
+                    <img src="./img/footer/whatsapp.png" alt="link a whatsapp" class="link__img">
+                </a>
             </div>
+            <!-- links de empresa vista DESKTOP -->
             <div class="empresa-desk">
                 <p class="empresa__titulo">Empresa</p>
                 <a href="./pages/nosotros.html" class="empresa__link">Nosotros</a>
                 <a href="./pages/contacto.html" class="empresa__link">Contacto</a>
                 <a href="./pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
             </div>
+            <!-- suscripcion -->
             <div class="suscribete">
                 <p class="suscribete__titulo">Suscribete a nuestras noticias</p>
                 <P class="suscribete__subtitulo">¡Suscribite y recibí todas nuestras novedades!</P>
@@ -364,7 +734,8 @@
                     <input type="submit" value="SUSCRIBIRME" id="boton-suscribirme">
                 </form>
             </div>
-            <section class="no">
+            <!-- links de empresa vista PHONE -->
+            <section class="accorion-phone">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -405,6 +776,6 @@
             <p class="copyright">&copy;Copyright 2023 / Trinity Technology</p>
         </section>
     </footer>
-    </body>
-    
-    </html>
+</body>
+</html>
+                            

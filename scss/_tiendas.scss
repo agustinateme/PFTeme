@@ -1,0 +1,68 @@
+/*variables*/
+$color-rosa: #cf8585;
+$color-gris: #646464;
+$letra-fuerte: 600;
+$letra-normal: 400;
+
+/*mixing flex*/
+@mixin display-flex-align-justify-margin($display, $flex, $align, $justify, $margin) {
+    display: $display;
+    flex-direction: $flex;
+    align-items: $align;
+    justify-content: $justify;
+    margin: $margin;
+}
+/*mixing peso-tamaño-colores*/
+@mixin weight-size-color($weight, $size, $colors) {
+    font-weight: $weight;
+    font-size: $size;
+    color: $colors;
+    margin: 0;
+}
+.seccion-tienda {
+    @include display-flex-align-justify-margin(flex, row, center, space-around, 0 0.625rem);
+    flex-wrap: wrap;
+    
+        .seccion-tienda__lugar {
+            @include display-flex-align-justify-margin(flex, column, center, center, 0 0.625rem 1.25rem 0.625rem);
+                    .lugar__frame {
+                        width: 100%;
+                        padding: 1px;
+                        border-radius: 1rem;
+                        margin-bottom: 0.625rem;
+                    }
+        }
+}
+
+.texto-tienda {
+    @include display-flex-align-justify-margin(flex, column, center, center, 0 0 2rem 0);
+
+    .tienda__Ubi {
+        @include weight-size-color($letra-fuerte, 1rem, black);
+    }
+
+    .tienda__Subi {
+        @include weight-size-color($letra-fuerte, 1rem, black);
+    }
+
+    .tienda__num {
+        @include weight-size-color($letra-normal, 1rem, $color-rosa);
+    }
+
+    .tienda__ema {
+        /*extend de .tienda__num*/
+        @extend .tienda__num;
+        text-decoration: none;
+    }
+
+    .tienda__hor {
+        @include weight-size-color($letra-normal, 1rem, $color-gris);
+    }
+}
+
+
+
+
+
+
+

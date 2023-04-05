@@ -1,0 +1,742 @@
+@charset "UTF-8";
+/*Agustina Teme*/ /*variables*/
+.ir-a-index {
+  display: inline-block;
+  text-decoration: none;
+  color: #cf8585;
+  font-size: 1rem;
+  margin: 1.25rem;
+}
+.ir-a-index::after {
+  content: "Página Principal";
+}
+.ir-a-index img, .ir-a-index .nosotros .booble-img iframe, .nosotros .booble-img .ir-a-index iframe {
+  display: inline-block;
+  width: 1.5rem;
+  vertical-align: text-bottom;
+}
+.ir-a-index img:hover, .ir-a-index .nosotros .booble-img iframe:hover, .nosotros .booble-img .ir-a-index iframe:hover {
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+
+.banner-secundario {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: black;
+  margin: 1.25rem;
+  border-radius: 2.5rem;
+}
+.banner-secundario .banner-secundario__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+.banner-secundario .banner-secundario__info h3 {
+  color: white;
+  font-weight: 600;
+}
+.banner-secundario .banner-secundario__info h4 {
+  color: white;
+  font-weight: 600;
+}
+.banner-secundario .banner-secundario__img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.banner-secundario .banner-secundario__img img, .banner-secundario .banner-secundario__img .nosotros .booble-img iframe, .nosotros .booble-img .banner-secundario .banner-secundario__img iframe {
+  width: 100%;
+}
+
+/*variables*/
+/*mixin con parametros*/
+/*mixin sin parametros para productos-destacados*/
+/*mixin con un parametro para productos*/
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #646464;
+  margin-bottom: 1.25rem;
+}
+
+.productos-destacados {
+  display: grid;
+  grid-template-rows: auto auto;
+  background-color: #e9e9e9;
+  border-radius: 2.5rem;
+  margin: 1.25rem;
+  padding: 1.875rem;
+  justify-content: center;
+}
+.productos-destacados h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #646464;
+  margin-bottom: 1.25rem;
+}
+.productos-destacados h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #646464;
+  margin-bottom: 1.25rem;
+}
+.productos-destacados div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 1.25rem;
+  margin: 0.625rem;
+  padding: 0.938rem;
+  justify-content: flex-end;
+  width: 15.625rem;
+  box-shadow: 0.313rem 0.313rem 0.313rem #b1b1b1;
+  text-align: center;
+}
+.productos:hover {
+  box-shadow: 0.313rem 0.313rem 0.313rem #e5a7a7;
+}
+.productos img, .productos .nosotros .booble-img iframe, .nosotros .booble-img .productos iframe {
+  width: 100%;
+}
+.productos .productos__titulo {
+  margin: 0.25rem 0;
+  font-size: small;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.productos .productos__precio {
+  margin: 0.25rem 0;
+  font-size: small;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.productos .product-stock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.productos .product-stock .productos__stock {
+  margin: 0.25rem 0;
+  font-size: small;
+  color: green;
+}
+.productos .product-stock .productos__agotado {
+  margin: 0.25rem 0;
+  font-size: small;
+  color: red;
+}
+.productos .product-stock .product-stock__unidades {
+  margin: 1rem;
+  width: 7rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/*variables*/
+/*mixing flex*/
+/*mixing peso-tamaño-colores*/
+.seccion-tienda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 0.625rem;
+  flex-wrap: wrap;
+}
+.seccion-tienda .seccion-tienda__lugar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.625rem 1.25rem 0.625rem;
+}
+.seccion-tienda .seccion-tienda__lugar .lugar__frame {
+  width: 100%;
+  padding: 1px;
+  border-radius: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.texto-tienda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+.texto-tienda .tienda__Ubi {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+.texto-tienda .tienda__Subi {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+.texto-tienda .tienda__num, .texto-tienda .tienda__ema {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #cf8585;
+  margin: 0;
+}
+.texto-tienda .tienda__ema {
+  /*extend de .tienda__num*/
+  text-decoration: none;
+}
+.texto-tienda .tienda__hor {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #646464;
+  margin: 0;
+}
+
+/*variables*/
+/*mixin flex*/
+/*mixin grid*/
+.formularios-de-cuentas {
+  margin-bottom: 1rem;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacto form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.contacto form div .input-boton {
+  width: 9.5rem;
+  height: 2.5rem;
+}
+.contacto form div .input-boton:hover {
+  background-color: #cf8585;
+}
+.contacto form div .input-form {
+  height: 2.5rem;
+}
+.contacto form div .input-area {
+  height: 10rem;
+}
+.contacto form #Terminos-y-condiciones {
+  height: 10rem;
+  overflow: scroll;
+  border: 1px solid #646464;
+}
+.contacto form #coso {
+  display: grid;
+  grid-template-columns: 2rem 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+}
+.contacto form #coso2 {
+  display: grid;
+  grid-template-columns: 2rem 2fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+}
+.contacto form #coso2 #tyc, .contacto form #coso2 #news {
+  width: 1.3rem;
+}
+.contacto form #botones-juntos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subtexto, .nosotros h2 {
+  color: #cf8585;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.send {
+  margin: 1rem;
+}
+
+/*variables*/
+.nosotros {
+  background-color: #e9e9e9;
+  border-radius: 40px;
+  margin: 20px;
+  padding: 30px;
+}
+.nosotros p {
+  font-size: rem;
+}
+.nosotros .booble-img {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.nosotros .booble-img img, .nosotros .booble-img iframe {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+/*variables*/
+/*mixin para botones*/
+/*mixin flex*/
+/*mixin estilos-text*/
+/*mixin tamaños y bordes*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  background-color: black;
+}
+
+/*botones*/
+#dropdownMenuButton, .input-boton, #btn {
+  background-color: #e5a7a7;
+  color: white;
+  border: none;
+  font-weight: 600;
+  width: 115px;
+  border-radius: 0.5rem;
+}
+#dropdownMenuButton:hover, .input-boton:hover, #btn:hover {
+  background-color: #cf8585;
+  color: white;
+  border: none;
+}
+#dropdownMenuButton:active, .input-boton:active, #btn:active {
+  background-color: #cf8585;
+  color: white;
+  border: none;
+}
+
+/*aunque el nesting me diga que .menu-icon vaya dentro de #dropdownmenubutton, lo dejo por fuera
+debido a que en el id y en la clase siguiente estoy extendiendo #dropdownmenubutton,
+si no se repetiría 3 veces */
+.menu-icon {
+  width: 2rem;
+  cursor: pointer;
+}
+
+/*FOOTER COSAS EN COMÚN*/
+/*seccion rosa*/
+.section-pink {
+  background-color: #f2b6b6;
+}
+.section-pink .link__img {
+  width: 2.2rem;
+  margin: 2px;
+}
+.section-pink .link__img:hover {
+  transform: rotate(360deg);
+  transition: all 1.5s;
+}
+.section-pink .empresa__titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.section-pink .empresa__link {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+.section-pink .suscribete {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.section-pink .suscribete__titulo {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.section-pink .suscribete__subtitulo {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.section-pink .suscribete form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.section-pink .suscribete form #email-index {
+  border: none;
+  padding: 0 0 0 1rem;
+  border-radius: 1.5rem 0px 0px 1.5rem;
+  width: 60%;
+  height: 40px;
+  margin: 0 0 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.section-pink .suscribete form #boton-suscribirme {
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0px 1.5rem 1.5rem 0px;
+  width: 40%;
+  height: 2.5rem;
+  margin: 0 1rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  vertical-align: top;
+}
+
+/*seccion negra*/
+.section-black {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.section-black .flex-pagos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section-black .flex-pagos .flex-pagos__img {
+  height: 1.188rem;
+  margin: 10px 5px 10px 5px;
+}
+.section-black .copyright {
+  font-size: 1rem;
+  color: white;
+  margin: 0 0 5px 10px;
+}
+
+/*RESPONSIVE DESKTOP*/
+@media only screen and (min-width: 768px) {
+  .logo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+  .nav-phone,
+  .banner-phone {
+    display: none;
+  }
+  header {
+    padding: 10px;
+  }
+  .nav-desktop {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-right: 2rem;
+  }
+  .nav-desktop section {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .nav-desktop a {
+    text-decoration: none;
+    color: white;
+  }
+  .buscador {
+    font-size: 1rem;
+    width: 80%;
+    height: 50%;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    border: none;
+    background-image: url(../img/header/search2.png);
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center right 1rem;
+  }
+  .icon-desk {
+    width: 2rem;
+  }
+  .icon-desk:hover {
+    transform: rotate(360deg);
+    transition: all 1.5s;
+  }
+  .nav-desktop__link p {
+    margin: 0 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+  }
+  .nav-desktop__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5rem;
+    width: 100%;
+  }
+  .dropdown-menu {
+    background-color: #747474;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    width: 300px;
+    padding: 0;
+  }
+  .dropdown-item:hover {
+    background-color: #848484;
+    color: white;
+  }
+  .dropdown-item {
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .section-pink {
+    display: grid;
+    grid-template-columns: 1fr 2fr 60%;
+    padding: 1rem;
+  }
+  .redes-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .empresa-desk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .empresa__titulo {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .accorion-phone {
+    display: none;
+  }
+  .banner-secundario__img3--radio {
+    border-top-right-radius: 2.5rem;
+  }
+  .banner-secundario__img6--radio {
+    border-bottom-right-radius: 2.5rem;
+  }
+  /*MI CUENTA*/
+  .grid-mi-cuenta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    justify-items: center;
+    margin: 0 1.25rem;
+    grid-column-gap: 1.25rem;
+  }
+  .texto-tienda {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .input-form,
+  .input-area,
+  #Terminos-y-condiciones {
+    width: 28rem;
+  }
+  #coso, #coso2 {
+    width: 28rem;
+  }
+}
+/*RESPONSIVE PHONE*/
+@media only screen and (max-width: 767px) {
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+  }
+  .nav-desktop,
+  .banner-desktop {
+    display: none;
+  }
+  .menu-icon {
+    width: 2rem;
+  }
+  .nav-phone__logo {
+    text-decoration: none;
+  }
+  .logo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.7rem;
+    margin: 5px 0 0 0;
+    color: white;
+  }
+  /* Estilos personalizados para el menú Offcanvas */
+  #offcanvasMenu {
+    background-color: #747474;
+    width: 15rem;
+  }
+  .offcanvas-header {
+    height: 2.9rem;
+    background-color: rgba(100, 100, 100, 0.2980392157);
+    color: white;
+  }
+  .offcanvas-body {
+    padding: 0;
+  }
+  .offcanvas-body ul {
+    list-style: none;
+    padding: 0;
+  }
+  #offcanvas-cuerpo li a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    font-weight: 550;
+    text-decoration: none;
+  }
+  .offcanvas-body li a:hover {
+    background-color: #848484;
+  }
+  #menu-phone {
+    background-color: black;
+    border: none;
+    width: 2.5rem;
+  }
+  .nav-phone div a {
+    padding-left: 10px;
+  }
+  .nav-phone a img, .nav-phone a .nosotros .booble-img iframe, .nosotros .booble-img .nav-phone a iframe {
+    width: 1.5rem;
+  }
+  .nav-phone {
+    display: grid;
+    grid-template-columns: 10% 60% 10% 10% 10%;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+  }
+  .nav-phone__links {
+    margin: 0 1rem;
+  }
+  .banner-secundario {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-secundario__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner-secundario__img5--radio {
+    border-bottom-left-radius: 2.5rem;
+  }
+  .banner-secundario__img6--radio {
+    border-bottom-right-radius: 2.5rem;
+  }
+  .section-pink {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .redes-sociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .redes-sociales__link {
+    padding: 1rem;
+  }
+  .suscribete {
+    padding-top: 1rem;
+  }
+  .accordion-button {
+    font-weight: bold;
+  }
+  .empresa-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .empresa-desk {
+    display: none;
+  }
+  .empresa__link {
+    padding: 1rem;
+  }
+  .accordion {
+    --bs-accordion-btn-color: black;
+    --bs-accordion-border-width: 0px;
+    --bs-accordion-active-bg: #f2b6b6;
+    --bs-accordion-bg: #cf8585;
+    --bs-accordion-active-color: black;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-inner-border-radius: none;
+    --bs-accordion-border-radius: none;
+  }
+  .accordion-body {
+    padding: 0;
+  }
+  /*TIENDAS*/
+  .seccion-tienda {
+    display: flex;
+    flex-direction: column;
+  }
+  /*MI CUENTA*/
+  .grid-mi-cuenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-form,
+  .input-area,
+  #Terminos-y-condiciones {
+    width: 19rem;
+  }
+  .contacto {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subtexto, .nosotros h2 {
+    margin: 0 1.25rem 1.25rem 1.25rem;
+  }
+  #coso2,
+  #coso {
+    width: 19rem;
+  }
+}/*# sourceMappingURL=style.css.map */

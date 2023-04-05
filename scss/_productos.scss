@@ -1,0 +1,107 @@
+/*variables*/
+$color-gris: #646464;
+$color-gris-claro: #e9e9e9;
+$color-gris-variante: #b1b1b1;
+$color-rosa-variante: #e5a7a7;
+$letra-fuerte: 600;
+$letra-normal: 400;
+$precios-letra: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+/*mixin con parametros*/
+@mixin bg-br-m-p-j($bg, $br, $m, $p, $j) {
+    background-color: $bg;
+    border-radius: $br;
+    margin: $m;
+    padding: $p;
+    justify-content: $j;
+}
+@mixin d-fd-a($d, $fd, $a) {
+    display: $d;
+    flex-direction: $fd;
+    align-items: $a;
+}
+@mixin size-weight($si, $we) {
+    font-size: $si;
+    font-weight: $we;
+}
+
+/*mixin sin parametros para productos-destacados*/
+@mixin texto-productos {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: $letra-fuerte;
+    color: $color-gris;
+    margin-bottom: 1.25rem;
+}
+@mixin margin-productos {
+    margin: 0.25rem 0;
+    font-size: small;
+}
+/*mixin con un parametro para productos*/
+@mixin color-productos ($colors) {
+    color: $colors;
+}
+
+h1 {
+    @include texto-productos;
+}
+.productos-destacados {
+    display: grid;
+    grid-template-rows: auto auto;
+    @include bg-br-m-p-j($color-gris-claro, 2.5rem, 1.25rem, 1.875rem, center);
+
+        h1{
+            @include texto-productos;
+        }
+        h2{
+            @include texto-productos;
+        }
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+}
+
+.productos {
+    @include d-fd-a(flex, column, center);
+    @include bg-br-m-p-j(white, 1.25rem, 0.625rem, 0.938rem, flex-end);
+    width: 15.625rem;
+    box-shadow: 0.313rem 0.313rem 0.313rem $color-gris-variante;
+    text-align: center;
+        &:hover{
+            box-shadow: 0.313rem 0.313rem 0.313rem $color-rosa-variante;
+        }
+        img{
+            width: 100%;
+        }
+        .productos__titulo{
+            @include margin-productos;
+            @include size-weight(0.9rem, $letra-normal);
+        }
+        .productos__precio{
+            @include margin-productos;
+            font-family: $precios-letra;
+            @include size-weight(1rem, $letra-fuerte);
+        }
+        .product-stock {
+            @include d-fd-a(flex, row, center);
+            flex-wrap: nowrap;
+        
+                .productos__stock{
+                    @include margin-productos;
+                    @include color-productos(green);
+                }
+
+                .productos__agotado{
+                    @include margin-productos;
+                    @include color-productos(red);
+                }
+
+                .product-stock__unidades {
+                    margin: 1rem;
+                    width: 7rem;
+                    @include size-weight(0.9rem, $letra-normal);
+                }
+        }
+}

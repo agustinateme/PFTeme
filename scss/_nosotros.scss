@@ -1,0 +1,34 @@
+/*variables*/
+$color-gris-claro: #e9e9e9;
+
+.nosotros {
+    background-color: $color-gris-claro;
+    border-radius: 40px;
+    margin: 20px;
+    padding: 30px;
+
+        p{
+            font-size: rem;
+        }
+
+        .booble-img {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+                img {
+                width: 100%;
+                max-width: 25rem;
+                border-radius: 1rem;
+                margin: 1rem;
+                }
+
+                iframe {
+                    @extend img;
+                }
+        }
+}
+
+
+

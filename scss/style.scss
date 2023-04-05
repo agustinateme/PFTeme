@@ -1,0 +1,524 @@
+/*Agustina Teme*/
+@import "index";
+@import "productos";
+@import "tiendas";
+@import "form";
+@import "nosotros";
+
+/*variables*/
+$color-rosa: #cf8585;
+$color-rosa-variante: #e5a7a7;
+$color-pie: #f2b6b6;
+$letra-fuerte: 600;
+$letra-normal: 400;
+
+/*mixin para botones*/
+@mixin bg-color-br($bg){
+    background-color: $bg;
+    color: white;
+    border: none;
+}
+/*mixin flex*/
+@mixin dis-fdir-fwr-jcont($d, $fd, $fwr, $jc) {
+    display: $d;
+    flex-direction: $fd;
+    flex-wrap: $fwr;
+    justify-content: $jc;
+}
+/*mixin estilos-text*/
+@mixin margin-fsize-fweight($m, $fs, $fwe){
+    margin: $m;
+    font-size: $fs;
+    font-weight: $fwe;
+}
+/*mixin tamaños y bordes*/
+@mixin border-pd-br-wid-heig($b, $p, $br, $w, $h) {
+    border: $b;
+    padding: $p;
+    border-radius: $br;
+    width: $w;
+    height: $h;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: black;
+}
+
+/*botones*/
+#dropdownMenuButton {
+    @include bg-color-br($color-rosa-variante);
+    font-weight: $letra-fuerte;
+    width: 115px;
+    border-radius: 0.5rem;
+
+        &:hover{
+            @include bg-color-br($color-rosa);
+        }
+
+        &:active{
+            @include bg-color-br($color-rosa);
+        }     
+}
+
+/*aunque el nesting me diga que .menu-icon vaya dentro de #dropdownmenubutton, lo dejo por fuera
+debido a que en el id y en la clase siguiente estoy extendiendo #dropdownmenubutton,
+si no se repetiría 3 veces */
+.menu-icon {
+    width: 2rem;
+    cursor: pointer;
+}
+ 
+#btn {
+    @extend #dropdownMenuButton;
+}
+.input-boton {
+    @extend #dropdownMenuButton;
+}
+
+/*FOOTER COSAS EN COMÚN*/
+/*seccion rosa*/
+.section-pink {
+    background-color: $color-pie;
+
+        .link__img {
+            width: 2.2rem;
+            margin: 2px;
+
+                &:hover{
+                    transform: rotate(360deg);
+                    transition: all 1.5s;
+                }
+        }
+
+        .empresa__titulo {
+            @include margin-fsize-fweight(0, 1rem, $letra-fuerte);
+        }
+
+        .empresa__link {
+            @include margin-fsize-fweight(0, 0.9rem, $letra-normal);
+            text-decoration: none;
+            color: black;
+        }
+
+        .suscribete {
+            @include dis-fdir-fwr-jcont(flex, column, nowrap, start);
+            align-items: center;
+            text-align: center;
+        }
+
+        .suscribete__titulo {
+            @include margin-fsize-fweight(0 0 0.5rem 0, 1rem, $letra-fuerte);
+        }
+
+        .suscribete__subtitulo {
+            @include margin-fsize-fweight(0 0 0.5rem 0, 0.9rem, $letra-normal);
+        }
+
+        .suscribete form {
+            display: flex;
+            flex-wrap: nowrap;
+
+                #email-index {
+                    @include border-pd-br-wid-heig(none, 0 0 0 1rem, 1.5rem 0px 0px 1.5rem, 60%, 40px);
+                    @include margin-fsize-fweight(0 0 0 1rem, 0.9rem, $letra-normal);
+                }
+
+                #boton-suscribirme {
+                    @include border-pd-br-wid-heig(none, 0 1rem, 0px 1.5rem 1.5rem 0px, 40%, 2.5rem);
+                    @include margin-fsize-fweight(0 1rem 0 0, 0.75rem, $letra-fuerte);
+                    color: white;
+                    background-color: black;
+                    vertical-align: top;
+                }
+        }
+}
+
+/*seccion negra*/
+.section-black {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+        .flex-pagos {
+            @include dis-fdir-fwr-jcont(flex, row, wrap, space-around);
+
+                .flex-pagos__img {
+                    height: 1.188rem;
+                    margin: 10px 5px 10px 5px;
+                }
+        }
+
+        .copyright {
+            font-size: 1rem;
+            color: white;
+            margin: 0 0 5px 10px;
+        }
+}
+
+/*RESPONSIVE DESKTOP*/
+@media only screen and (min-width: 768px) {
+    .logo {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.7rem;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .nav-phone,
+    .banner-phone {
+        display: none;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .nav-desktop {
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-right: 2rem;
+    }
+
+    .nav-desktop section {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .nav-desktop a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .buscador {
+        font-size: 1rem;
+        width: 80%;
+        height: 50%;
+        border-radius: 2rem;
+        padding-left: 1rem;
+        border: none;
+        background-image: url(../img/header/search2.png);
+        background-size: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center right 1rem;
+    }
+
+    .icon-desk {
+        width: 2rem;
+    }
+
+    .icon-desk:hover {
+        transform: rotate(360deg);
+        transition: all 1.5s;
+    }
+
+    .nav-desktop__link p {
+        margin: 0 0 0 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .nav-desktop__link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.5rem;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        background-color: #747474;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        width: 300px;
+        padding: 0;
+    }
+
+    .dropdown-item:hover {
+        background-color: #848484;
+        color: white;
+    }
+
+    .dropdown-item {
+        color: white;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .section-pink {
+        display: grid;
+        grid-template-columns: 1fr 2fr 60%;
+        padding: 1rem;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .empresa-desk {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .empresa__titulo {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .accorion-phone {
+        display: none;
+    }
+
+    .banner-secundario__img3--radio {
+        border-top-right-radius: 2.5rem;
+    }
+
+    .banner-secundario__img6--radio {
+        border-bottom-right-radius: 2.5rem;
+    }
+
+    /*MI CUENTA*/
+    .grid-mi-cuenta {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+        justify-items: center;
+        margin: 0 1.25rem;
+        grid-column-gap: 1.25rem;
+    }
+
+    .texto-tienda {
+        width: fit-content;
+    }
+
+    .input-form,
+    .input-area,
+    #Terminos-y-condiciones {
+        width: 28rem;
+    }
+
+    #coso, #coso2 {
+        width: 28rem;
+    }
+}
+
+/*RESPONSIVE PHONE*/
+@media only screen and (max-width: 767px) {
+
+    header {
+        position: sticky;
+        top: 0px;
+        z-index: 9;
+    }
+
+    .nav-desktop,
+    .banner-desktop {
+        display: none;
+    }
+
+    .menu-icon {
+        width: 2rem;
+    }
+
+    .nav-phone__logo {
+        text-decoration: none;
+    }
+
+    .logo {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.7rem;
+        margin: 5px 0 0 0;
+
+        color: white;
+    }
+
+    /* Estilos personalizados para el menú Offcanvas */
+    #offcanvasMenu {
+        background-color: #747474;
+        width: 15rem;
+
+    }
+
+    .offcanvas-header {
+        height: 2.9rem;
+        background-color: #6464644c;
+        color: white;
+    }
+
+    .offcanvas-body {
+        padding: 0;
+    }
+
+    .offcanvas-body ul {
+        list-style: none;
+        padding: 0;
+
+    }
+
+    #offcanvas-cuerpo li a {
+        display: block;
+        padding: 0.7rem 1.5rem;
+        color: white;
+        font-weight: 550;
+        text-decoration: none;
+    }
+
+    .offcanvas-body li a:hover {
+        background-color: #848484;
+    }
+
+    #menu-phone {
+        background-color: black;
+        border: none;
+        width: 2.5rem;
+    }
+
+    .nav-phone div a {
+        padding-left: 10px;
+    }
+
+    .nav-phone a img {
+        width: 1.5rem;
+    }
+
+    .nav-phone {
+        display: grid;
+        grid-template-columns: 10% 60% 10% 10% 10%;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .nav-phone__links {
+        margin: 0 1rem;
+    }
+
+    .banner-secundario {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-secundario__img {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-secundario__img5--radio {
+        border-bottom-left-radius: 2.5rem;
+    }
+
+    .banner-secundario__img6--radio {
+        border-bottom-right-radius: 2.5rem;
+    }
+
+    .section-pink {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redes-sociales__link {
+        padding: 1rem;
+    }
+
+    .suscribete {
+        padding-top: 1rem;
+    }
+
+    .accordion-button {
+        font-weight: bold;
+    }
+
+    .empresa-phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .empresa-desk {
+        display: none;
+    }
+
+    .empresa__link {
+        padding: 1rem;
+    }
+
+    .accordion {
+        --bs-accordion-btn-color: black;
+        --bs-accordion-border-width: 0px;
+        --bs-accordion-active-bg: #f2b6b6;
+        --bs-accordion-bg: #cf8585;
+        --bs-accordion-active-color: black;
+        --bs-accordion-btn-focus-box-shadow: none;
+        --bs-accordion-inner-border-radius: none;
+        --bs-accordion-border-radius: none;
+    }
+
+    .accordion-body {
+        padding: 0;
+    }
+
+    /*TIENDAS*/
+    .seccion-tienda {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*MI CUENTA*/
+    .grid-mi-cuenta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-form,
+    .input-area,
+    #Terminos-y-condiciones {
+        width: 19rem;
+    }
+
+    .contacto {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subtexto {
+        margin: 0 1.25rem 1.25rem 1.25rem;
+    }
+
+    #coso2,
+    #coso {
+        width: 19rem;
+    }
+}

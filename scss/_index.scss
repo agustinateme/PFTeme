@@ -1,0 +1,63 @@
+/*variables*/
+$color-rosa: #cf8585;
+$letra-fuerte: 600;
+
+@mixin info {
+    color: white;
+    font-weight: $letra-fuerte;
+}    
+
+.ir-a-index {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-rosa;
+    
+    font-size: 1rem;
+    margin: 1.25rem;
+
+        &::after {
+            content: "Página Principal";
+        }
+
+        img{
+            display: inline-block;
+            width: 1.5rem;
+            vertical-align: text-bottom;
+            &:hover {
+                    transform: rotate(360deg);
+                    transition: all 1s;
+                }
+        }
+}
+
+.banner-secundario {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: black;
+    margin: 1.25rem;
+    border-radius: 2.5rem;
+
+        .banner-secundario__info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+            text-align: center;
+
+                h3{
+                    @include info;
+                }
+                h4{
+                    @include info;
+                }
+        }
+        .banner-secundario__img {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+                img {
+                        width: 100%;
+                    }
+        }
+}

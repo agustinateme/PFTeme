@@ -2,167 +2,364 @@
 <html lang="es">
 
 <head>
-    <title>ACCESORIOS</title>
-    <link rel="icon" href="../img/ico.svg">
+    <!--SEO-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <link href="../css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Necesitas un accesorio para tu dispositivo? No busques más. En nuestra tienda en línea encontrarás una gran variedad de opciones para todas tus necesidades. ¡No esperes más para encontrar el accesorio perfecto!">
+    <meta name="keywords" content="celulares, tablets, notebooks, smartwatches, xiaomi, samsung, apple">
+
+    <!--Links de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <!--Links de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <!--titulo e icono-->
+    <title>Accesorios</title>
+    <link rel="icon" href="../img/ico.svg">
+
+    <!--Links de estilos propios-->
+    <link rel="stylesheet" href="../scss/style.css">
 </head>
 
 <body>
     <header>
-        <section class="icon-header">
-            <div class="menu-phone">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
-                        src="../img/header/menu-icon.png" alt="menu-icon" id="btn-phone"></button>
-
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <a href="../pages/celulares.html">CELULARES</a>
-                        <a href="../pages/notebooks.html">NOTEBOOKS</a>
-                        <a href="../pages/smartwatches.html">SMARTWATCHES</a>
-                        <a href="../pages/tablets.html">TABLETS</a>
-                        <a href="../pages/smarthome.html">SMART HOME</a>
-                        <a href="../pages/audio.html">AUDIO</a>
-                        <a href="../pages/accesorios.html">ACCESORIOS</a>
-                    </div>
-                </div>
-            </div>
-            <a href="../index.html">
-                <img src="../img/header/logo.svg" alt="logo" id="logo">
-            </a>
-            <div>
-                <a href="#"><img src="../img/header/search1.png" alt="search">
-                </a>
-                <a href="../pages/tiendas.html">
-                    <img src="../img/header/map.png" alt="map">
-                </a>
-                <a href="../pages/mi-cuenta.html">
-                    <img src="../img/header/perfil.png" alt="mi cuenta">
-                </a>
-            </div>
-        </section>
-
-        <section class="navegacion">
+        <!-- HEADER DESKTOP -->
+        <section class="nav-desktop">
             <section>
-                <a href="../index.html">
-                    <img src="../img/header/logo.svg" alt="logo" class="logo-desk">
+                <!-- logo -->
+                <a class="nav-desktop__logo" href="../index.html">
+                    <p class="logo">TRINITY TECHNOLOGY</p>
                 </a>
+                <!-- Menú desplegable DESKTOP -->
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="../img/header/menu-icon.png" alt="menu-icon" id="btn-burger"> MENU
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../pages/celulares.html">CELULARES</a></li>
-                        <li><a class="dropdown-item" href="../pages/notebooks.html">NOTEBOOKS</a></li>
-                        <li><a class="dropdown-item" href="../pages/smartwatches.html">SMARTWATCHES</a></li>
-                        <li><a class="dropdown-item" href="../pages/tablets.html">TABLETS</a></li>
-                        <li><a class="dropdown-item" href="../pages/smarthome.html">SMART HOME</a></li>
-                        <li><a class="dropdown-item" href="../pages/audio.html">AUDIO</a></li>
-                        <li><a class="dropdown-item" href="../pages/accesorios.html">ACCESORIOS</a></li>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="menu-icon" src="../img/header/menu-icon.png" alt="">
+                        MENU
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="./celulares.html">CELULARES</a></li>
+                        <li><a class="dropdown-item" href="./notebooks.html">NOTEBOOKS</a></li>
+                        <li><a class="dropdown-item" href="./smartwatches.html">SMARTWATCHES</a></li>
+                        <li><a class="dropdown-item" href="./tablets.html">TABLETS</a></li>
+                        <li><a class="dropdown-item" href="./smarthome.html">SMART HOME</a></li>
+                        <li><a class="dropdown-item" href="./audio.html">AUDIO</a></li>
+                        <li><a class="dropdown-item" href="./accesorios.html">ACCESORIOS</a></li>
                     </ul>
                 </div>
             </section>
+            <!-- buscador -->
             <input class="buscador" type="text" placeholder="Buscar productos..." required>
-            <a href="../pages/tiendas.html">
-                <img src="../img/header/map.png" alt="map" class="icon-desk">Tiendas
+            <!-- link a tiendas -->
+            <a href="./tiendas.html" class="nav-desktop__link">
+                <img src="../img/header/map.png" alt="map" class="icon-desk">
+                <p>Tiendas</p>
             </a>
-            <a href="../pages/mi-cuenta.html">
-                <img src="../img/header/perfil.png" alt="mi cuenta" class="icon-desk">Mi Cuenta
+            <!-- link a mi cuenta -->
+            <a href="./mi-cuenta.html" class="nav-desktop__link">
+                <img src="../img/header/perfil.png" alt="mi cuenta" class="icon-desk">
+                <p>Mi Cuenta</p>
             </a>
         </section>
 
+        <!-- HEADER PHONE -->
+        <section class="nav-phone">
+            <div>
+                <!-- Botón para abrir el menú Offcanvas PHONE -->
+                <button id="menu-phone" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <img class="menu-icon" src="../img/header/menu-icon.png" alt="">
+                </button>
+                <!-- Menú Offcanvas -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu"
+                    aria-labelledby="offcanvasMenuLabel">
+                    <div class="offcanvas-header">
+                        <img class="menu-icon" data-bs-dismiss="offcanvas" aria-label="Cerrar"
+                            src="../img/header/menu-icon.png" alt="">
+                    </div>
+                    <div class="offcanvas-body" id="offcanvas-cuerpo">
+                        <ul>
+                            <li><a href="./celulares.html">CELULARES</a></li>
+                            <li><a href="./notebooks.html">NOTEBOOKS</a></li>
+                            <li><a href="./smartwatches.html">SMARTWATCHES</a></li>
+                            <li><a href="./tablets.html">TABLETS</a></li>
+                            <li><a href="./smarthome.html">SMART HOME</a></li>
+                            <li><a href="./audio.html">AUDIO</a></li>
+                            <li><a href="./accesorios.html">ACCESORIOS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- logo -->
+            <a class="nav-phone__logo" href="../index.html">
+                <p class="logo">TRINITY TECHNOLOGY</p>
+            </a>
+            <!-- buscador -->
+            <a href="#"><img src="../img/header/search1.png" alt="search">
+            </a>
+            <!-- link a tiendas -->
+            <a href="./tiendas.html">
+                <img src="../img/header/map.png" alt="map">
+            </a>
+            <!-- link a mi cuenta -->
+            <a href="./mi-cuenta.html">
+                <img src="../img/header/perfil.png" alt="mi cuenta">
+            </a>
+        </section>
     </header>
     <main>
+        <!--volver al index-->
         <a class="ir-a-index" href="../index.html">
-            <img src="../img/ir-a-index.png" alt="back-to-index"> Página principal
+            <img src="../img/ir-a-index.png" alt="back-to-index">
         </a>
+
+        <!--accesorios-->
         <section class="productos-destacados">
             <h1>ACCESORIOS</h1>
             <div>
                 <div class="productos">
-                    <img src="../img/cargador-apple-usb.webp" alt="producto">
-                    <p class="producto-info">Cargador apple usb-a 12w carga rápida</p>
-                    <p class="producto-precio">USD 37,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/cargador-apple-usb.webp" alt="cargador apple usb">
+                    <p class="productos__titulo">Cargador apple usb-a 12w carga rápida</p>
+                    <p class="productos__precio">USD 37,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/apple-magsafe-bateria-magnetica-portatil-original-para-iphone-white.webp" alt="producto">
-                    <p class="producto-info">Apple magsafe batería magnética portatil</p>
-                    <p class="producto-precio">USD 169,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/apple-magsafe-bateria-magnetica-portatil-original-para-iphone-white.webp" alt="apple magsafe bateria magnetica portatil">
+                    <p class="productos__titulo">Apple magsafe batería magnética portatil</p>
+                    <p class="productos__precio">USD 169,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
                     <img src="../img/cargador-inalambrico-3-en-1-9w-wireless-trio-charger-samsung-original-negro.webp"
-                        alt="producto">
-                    <p class="producto-info">Cargador inalámbrico 3 en 1 9w wireless Samsung</p>
-                    <p class="producto-precio">USD 109,00</p>
-                    <input type="button" value="COMPRAR">
+                        alt="cargador inalambrico samsung">
+                    <p class="productos__titulo">Cargador inalámbrico 3 en 1 9w wireless Samsung</p>
+                    <p class="productos__precio">USD 109,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/cargador-triple-carga-super-rapida-65w-original-samsung-black.webp" alt="producto">
-                    <p class="producto-info">Cargador triple carga super rápida 65w original samsung</p>
-                    <p class="producto-precio">USD 65,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/cargador-triple-carga-super-rapida-65w-original-samsung-black.webp"
+                        alt="cargador triple carga super rapida 65w original samsung black">
+                    <p class="productos__titulo">Cargador triple carga super rápida 65w original samsung</p>
+                    <p class="productos__precio">USD 65,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/mi-power-bank-10-000-mah-xiaomi-redmi-black.webp" alt="producto">
-                    <p class="producto-info">Mi power bank 10.000 mah xiaomi redmi</p>
-                    <p class="producto-precio">USD 29,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/mi-power-bank-10-000-mah-xiaomi-redmi-black.webp"
+                        alt="mi power bank 10.000 mah xiaomi redmi black">
+                    <p class="productos__titulo">Mi power bank 10.000 mah xiaomi redmi</p>
+                    <p class="productos__precio">USD 29,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/cable-reforzado-usb-c-a-usb-c-braided-1-metro-belkin-negro.webp" alt="producto">
-                    <p class="producto-info">Cable reforzado usb-c a usb-c braided 1 metro belkin</p>
-                    <p class="producto-precio">USD 27,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/cable-reforzado-usb-c-a-usb-c-braided-1-metro-belkin-negro.webp"
+                        alt="cable reforzado usb-c a usb-c braided 1 metro belkin negro">
+                    <p class="productos__titulo">Cable reforzado usb-c a usb-c braided 1 metro belkin</p>
+                    <p class="productos__precio">USD 27,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/apple-airtag-pack-x1-blanco.webp" alt="producto">
-                    <p class="producto-info">Apple airtag (pack x1)</p>
-                    <p class="producto-precio">USD 59,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/apple-airtag-pack-x1-blanco.webp"
+                        alt="apple airtag pack x1 blanco">
+                    <p class="productos__titulo">Apple airtag (pack x1)</p>
+                    <p class="productos__precio">USD 59,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
                 <div class="productos">
-                    <img src="../img/apple-airtag-loop-llavero-white.webp" alt="producto">
-                    <p class="producto-info">Apple airtag loop llavero</p>
-                    <p class="producto-precio">USD 47,00</p>
-                    <input type="button" value="COMPRAR">
+                    <img src="../img/apple-airtag-loop-llavero-white.webp" alt="apple airtag loop llavero white">
+                    <p class="productos__titulo">Apple airtag loop llavero</p>
+                    <p class="productos__precio">USD 47,00</p>
+                    <div class="product-stock">
+                        <p class="productos__stock">En stock</p>
+                        <select name="cantidad" class="product-stock__unidades">
+                            <option value="1">1 unidad</option>
+                            <option value="2">2 unidades</option>
+                            <option value="3">3 unidades</option>
+                            <option value="4">4 unidades</option>
+                            <option value="5">5 unidades</option>
+                            <option value="1">6 unidades</option>
+                            <option value="2">7 unidades</option>
+                            <option value="3">8 unidades</option>
+                            <option value="4">9 unidades</option>
+                            <option value="5">10 unidades</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn" data-bs-toggle="modal"
+                        data-bs-target="#modalMetodosPago">COMPRAR</button>
                 </div>
             </div>
         </section>
+
+        <!--MODAL PARA COMPRAS-->
+        <div class="modal fade" id="modalMetodosPago" tabindex="-1" aria-labelledby="modalMetodosPagoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMetodosPagoLabel">Seleccione un método de pago</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Selecciona tu método de pago:</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoPago" id="pagoTarjeta" value="tarjeta"
+                                checked>
+                            <label class="form-check-label" for="pagoTarjeta">
+                                Tarjeta de Crédito o Débito
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoPago" id="pagoPaypal" value="paypal">
+                            <label class="form-check-label" for="pagoPaypal">
+                                PayPal
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary modal-bt" id="btn" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary modal-bt" id="btn">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!--Seccion rosa del pie de pagina-->
         <section class="section-pink">
+            <!-- links a redes sociales -->
             <div class="redes-sociales">
-                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link"><img
-                        src="../img/footer/instagram.png" alt="link a instagram" class="link__img"></a>
-                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank"
-                    class="redes-sociales__link"><img src="../img/footer/facebook.png" alt="link a facebook"
-                        class="link__img"></a>
-                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link"><img
-                        src="../img/footer/whatsapp.png" alt="link a whatsapp" class="link__img"></a>
+                <a href="https://www.instagram.com/coderhouse/" target="_blank" class="redes-sociales__link">
+                    <img src="../img/footer/instagram.png" alt="link a instagram" class="link__img">
+                </a>
+                <a href="https://www.facebook.com/Coderhouse/?locale=es_LA" target="_blank" class="redes-sociales__link">
+                    <img src="../img/footer/facebook.png" alt="link a facebook" class="link__img">
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank" class="redes-sociales__link">
+                    <img src="../img/footer/whatsapp.png" alt="link a whatsapp" class="link__img">
+                </a>
             </div>
+            <!-- links de empresa vista DESKTOP -->
             <div class="empresa-desk">
                 <p class="empresa__titulo">Empresa</p>
-                <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
-                <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
-                <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
+                <a href="./nosotros.html" class="empresa__link">Nosotros</a>
+                <a href="./contacto.html" class="empresa__link">Contacto</a>
+                <a href="./trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
             </div>
+            <!-- suscripcion -->
             <div class="suscribete">
                 <p class="suscribete__titulo">Suscribete a nuestras noticias</p>
                 <P class="suscribete__subtitulo">¡Suscribite y recibí todas nuestras novedades!</P>
@@ -171,7 +368,8 @@
                     <input type="submit" value="SUSCRIBIRME" id="boton-suscribirme">
                 </form>
             </div>
-            <section class="no">
+            <!-- links de empresa vista PHONE -->
+            <section class="accorion-phone">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -184,10 +382,9 @@
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="empresa-phone">
-                                    <a href="../pages/nosotros.html" class="empresa__link">Nosotros</a>
-                                    <a href="../pages/contacto.html" class="empresa__link">Contacto</a>
-                                    <a href="../pages/trabaja-con-nosotros.html" class="empresa__link">Trabaja con
-                                        nosotros</a>
+                                    <a href="./nosotros.html" class="empresa__link">Nosotros</a>
+                                    <a href="./contacto.html" class="empresa__link">Contacto</a>
+                                    <a href="./trabaja-con-nosotros.html" class="empresa__link">Trabaja con nosotros</a>
                                 </div>
                             </div>
                         </div>
@@ -212,6 +409,5 @@
             <p class="copyright">&copy;Copyright 2023 / Trinity Technology</p>
         </section>
     </footer>
-    </body>
-    
-    </html>
+</body>
+</html>
