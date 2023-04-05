@@ -659,6 +659,7 @@ si no se repetiría 3 veces */
   .banner-secundario__img {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .banner-secundario__img5--radio {
     border-bottom-left-radius: 2.5rem;
