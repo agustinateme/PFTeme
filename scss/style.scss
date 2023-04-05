@@ -290,6 +290,16 @@ si no se repetiría 3 veces */
         display: none;
     }
 
+    .banner-secundario__img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .banner-secundario__img img{
+        width: 100%;
+    }
+
     .banner-secundario__img3--radio {
         border-top-right-radius: 2.5rem;
     }
@@ -424,6 +434,10 @@ si no se repetiría 3 veces */
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .banner-secundario__img img{
+        width: 100%;
     }
 
     .banner-secundario__img5--radio {

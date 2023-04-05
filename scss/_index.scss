@@ -52,12 +52,5 @@ $letra-fuerte: 600;
                     @include info;
                 }
         }
-        .banner-secundario__img {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-                img {
-                        width: 100%;
-                    }
-        }
+         
 }

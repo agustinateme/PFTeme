@@ -43,14 +43,6 @@
   color: white;
   font-weight: 600;
 }
-.banner-secundario .banner-secundario__img {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-.banner-secundario .banner-secundario__img img, .banner-secundario .banner-secundario__img .nosotros .booble-img iframe, .nosotros .booble-img .banner-secundario .banner-secundario__img iframe {
-  width: 100%;
-}
 
 /*variables*/
 /*mixin con parametros*/
@@ -552,6 +544,14 @@ si no se repetiría 3 veces */
   .accorion-phone {
     display: none;
   }
+  .banner-secundario__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .banner-secundario__img img, .banner-secundario__img .nosotros .booble-img iframe, .nosotros .booble-img .banner-secundario__img iframe {
+    width: 100%;
+  }
   .banner-secundario__img3--radio {
     border-top-right-radius: 2.5rem;
   }
@@ -660,6 +660,9 @@ si no se repetiría 3 veces */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+  .banner-secundario__img img, .banner-secundario__img .nosotros .booble-img iframe, .nosotros .booble-img .banner-secundario__img iframe {
+    width: 100%;
   }
   .banner-secundario__img5--radio {
     border-bottom-left-radius: 2.5rem;
